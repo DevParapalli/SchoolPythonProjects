@@ -1,0 +1,30 @@
+h1 {
+	color: #2693c5;
+	font-family: "Lobster";
+}
+
+body {
+	padding-left: 15px;
+}
+
+input {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+label {
+	padding-left: 10px;
+	padding-right: 10px;
+	font-family: "Lobster";
+	color: #2636c5;
+}
+
+.instruction-text {
+	font-family: "Lobster";
+	color: #2678c5;
+}
+
+.response-text {
+	font-family: "Lobster";
+	color: #2678c5;
+}

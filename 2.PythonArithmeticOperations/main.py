@@ -1,27 +1,22 @@
-def add(a,b):
-    return a + b
+import my_math
+addition = my_math.add
+subtraction = my_math.subtract
+multiplication = my_math.multiply
+division = my_math.divide
 
-def subtract(a, b):
-    return a - b
-
-def multiply(a, b):
-    return a * b
-
-def divide(a, b):
-    return a / b
 
 def main():
     alpha = int(input("Enter value of A: "))
     beta = int(input("Enter Value of B: "))
     print("Values Entered: A --> {}".format(alpha))
     print("                B --> {}".format(beta))
-    print("Addition :      {}".format(add(alpha, beta)))
-    print("Subtraction :   {}".format(subtract(alpha, beta)))
-    print("Multiplication: {}".format(multiply(alpha, beta)))
+    print("Addition :      {}".format(addition(alpha, beta)))
+    print("Subtraction :   {}".format(subtraction(alpha, beta)))
+    print("Multiplication: {}".format(multiplication(alpha, beta)))
     if beta == 0 :
         print("Division by Zero Not Supported")
     else:
-        print("Division :      {}".format(divide(alpha, beta)))
+        print("Division :      {}".format(division(alpha, beta)))
 
 if __name__ == "__main__":
     main()
