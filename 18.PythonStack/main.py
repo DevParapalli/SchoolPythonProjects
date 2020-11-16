@@ -1,24 +1,29 @@
-Stack = [9, 8, 7, 6, 5, 4, 3, 2, 1]
+STACK = []
 
-def remove():
+def pop():
     """
     Removes Top Element
     """
-    global Stack
-    Stack = Stack[1:]
+    global STACK
+    STACK = STACK[1:]
 
-def add(item):
-    global Stack # makes sure we are modifying the global Stack variable.
+def push(item):
+    """Removes the 
+
+    Args:
+        item ([type]): [description]
+    """
+    global STACK # makes sure we are modifying the global Stack variable.
     new_stack = []
     new_stack.append(item)
-    for element in Stack:
+    for element in STACK:
         new_stack.append(element)
-    Stack = new_stack
+    STACK = new_stack
 
-print(Stack)
-remove()
-print(Stack)
-add(10)
-print(Stack)
+print(STACK)
+pop()
+print(STACK)
+push(10)
+print(STACK)
 
 
