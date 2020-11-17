@@ -2,7 +2,7 @@ import tkinter
 import subprocess
 import sys
 def install(package):
-    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+    print(f"Please install {package} as follows: python -m pip install {package}")
 
 try: 
     import requests

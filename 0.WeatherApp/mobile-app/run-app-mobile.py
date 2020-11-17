@@ -5,7 +5,7 @@ import time
 import subprocess
 
 def install(package):
-    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+    print(f'{package} not installed. Please Install {} before continuing.')
 try:
     import requests
     print("Import Requests Success.")
