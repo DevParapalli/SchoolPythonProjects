@@ -5,7 +5,7 @@ import time
 import subprocess
 
 def install(package):
-    print(f'{package} not installed. Please Install {} before continuing.')
+    print(f'{package} not installed. Please Install {package} before continuing.')
 try:
     import requests
     print("Import Requests Success.")
