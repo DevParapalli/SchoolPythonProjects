@@ -1,5 +1,8 @@
 {% extends "form_to_csv/layout.html"%} {% block content%}
-<div class="response-text">
-	<h3>Response Saved sucessfully</h3>
+<h1 class="title">Form to CSV</h1>
+<div class="notification is-primary is-sucess">
+    Response Saved Sucessfully.
+    
 </div>
-<p>Debug: {{saved_data}} {% endblock content%}</p>
+<div class="field has-addons"><p class="control"><a class="button is-primary is-light" href="/add_data/">Add more</a></p><p class="control"><a class="button is-info is-light" href="/">Go Back</a></p></div>
+{% endblock content%}

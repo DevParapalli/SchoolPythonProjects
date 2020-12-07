@@ -1,0 +1,29 @@
+{% extends "form_to_csv/layout.html" %} {% block content%}
+<h1 class="title">Form to CSV</h1>
+<br />
+<br />
+<div id='viewport'>
+    <p class='content'>Choose action from below.</p>
+
+<p>
+<table class="table">
+    <tbody>
+        <tr>
+            <td>
+                <p>
+                    <a href="/add_data/" class="button is-primary is-light">Add Data </a>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a href="/download_csv/" class="button is-link is-light">Download Data</a>
+                </p>
+            </td>
+        </tr>
+		<tr><td><button class="button is-white">DANGER:</button></td><td><a class="button is-danger is-light" href="/wipe_database">Wipe DB</a></td></tr>
+    </tbody>
+</table>
+</p>
+</div>
+
+{%endblock%}
