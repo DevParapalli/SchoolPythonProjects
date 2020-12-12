@@ -1,4 +1,3 @@
-import pprint
 import re
 phishing_email_1 = "Robocalls are on the rise. Be wary of any pre-recorded messages you might receive"
 phishing_email_2 = "our access to your library account is expiring soon due to inactivity. To continue to have access to the library services account, you must reactivate your account. For this purpose, click the web address below or copy and paste it into your web browser. A successful login will activate your account and you will be redirected to your library profile"
@@ -31,7 +30,7 @@ def clean_word(unclean_word: str) -> str:
     return re.sub('[._, ?]', "", unclean_word.lower())
 
 
-words2 = [clean_word(i) for i in words1 if i not in common_not_words] # add cleaned words to the list
+words2 = [clean_word(i) for i in words1 if i.lower() not in common_not_words] # add cleaned words to the list
 counting_dict = {}
 for word in words2:
     if word not in counting_dict.keys():
@@ -47,4 +46,4 @@ for key in counting_dict:
 sorted_ranking = sorted(ranking_list, key=lambda x: -1 * x[1]) # we multiple by -1 to make them in the reverse order
 
 
-pprint.pprint(sorted_ranking[0:5])
+print(sorted_ranking[0:5])
