@@ -1,19 +1,19 @@
 import mysql.connector
 import os
 
-mydb = mysql.connector.connect(
+database = mysql.connector.connect(
     host="localhost",
     user="root",
     password=os.getenv('MYSQLPASSWORD', 'roguecatalyst') # gets the my sql password either from the system environment variable
     # or from the default value.
 )
 
-mycursor = mydb.cursor()
+cursor = database.cursor()
 
-#mycursor.execute('CREATE DATABASE mydatabase')
-mycursor.execute('SHOW DATABASES')
+#mycursor.execute('CREATE DATABASE mydatabase') # if the database does not exist
+cursor.execute('SHOW DATABASES')
 
-for x in mycursor:
+for x in cursor:
     print(x)
 
 

@@ -1,11 +1,13 @@
-import numpy as np
+import numpy as np 
+""" Numpy on windows has a error in the current version
+"""
 
 factorial = np.math.factorial
 real_sin = np.math.sin
 pi = np.pi
 
 angle = pi/3
-no_of_iter = 20 # keep under 80, otherwise causes OverflowError.
+no_of_iter = 20 # keep under 80, otherwise causes OverflowError. 
 
 
 def taylor_nthterm(x, n):

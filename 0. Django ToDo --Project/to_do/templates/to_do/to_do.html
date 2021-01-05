@@ -1,0 +1,68 @@
+{% extends 'simple_todo/main_secondary.html' %} 
+{% load static %}
+<!-- Title Block -->
+{%block title%} {{ page_title }} {%endblock title%}
+<!--Navbar Block-->
+{%block navbar%}
+<nav id="menu">
+	<div class="inner">
+		<h2>Menu</h2>
+		<ul class="links">
+			{% for nav_item in nav_bar%}
+			<li><a href="{{nav_item.link}}">{{nav_item.name}}</a></li>
+			{% endfor %}
+		</ul>
+		<a href="#" class="close">Close</a>
+	</div>
+</nav>
+{% endblock navbar%}
+<!-- Header Block -->
+{% block header%}
+<header>
+	<div class="inner">
+		<h2>To-Do Page</h2>
+		<p>Another stupid creation by another stupid person.</p>
+	</div>
+</header>
+{% endblock header%}
+<!--Content Block-->
+{%block content%}
+<h3 class="major">To Do Form Input</h3>
+<form action="" method="post">
+	{% csrf_token %}
+	<table>
+		{{ form }}
+	</table>
+	<input class="button primary fit" type="submit" value="Add Reminder." href="#reminder-table"/>
+</form>
+<h3 class="major" id="reminder-table">Remaining Reminders</h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr>
+<th>Title</th>
+<th>Reminder</th>
+<th>Deadline</th>
+<th>Created on</th>
+<th></th>
+</tr>
+</thead>
+</tbody>
+{%for item in to_do_list %}
+<tr>
+<td>{{item.title}}</td>
+<td>{{item.data}}</td>
+<td>{{item.dead_line}}</td>
+<td>{{item.created_date_time}}</td>
+<td>{% if item.id  %}<a class="button primary small" href="delete/{{item.id}}#reminder-table">DONE</a>{%endif%}</td>
+</tr>
+{% endfor %}
+</tbody>
+<table>
+</div>
+<!--For Content End. -->
+{%endblock content%}
+
+{%block articles%} 
+
+{% endblock articles%}

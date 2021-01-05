@@ -1,0 +1,42 @@
+{% extends 'simple_todo/main_primary.html' %} {% load static %}
+<!-- Title Block -->
+{%block title%} {{ page_title }} {%endblock title%}
+<!--Navbar Block-->
+{%block navbar%}
+<nav id="menu">
+	<div class="inner">
+		<h2>Menu</h2>
+		<ul class="links">
+			{% for nav_item in nav_bar%}
+			<li><a href="{{nav_item.link}}">{{nav_item.name}}</a></li>
+			{% endfor %}
+		</ul>
+		<a href="#" class="close">Close</a>
+	</div>
+</nav>
+{% endblock navbar%}
+<!--Content Block-->
+{%block content%} {%for content_item in content%}
+<!-- {{content_item.number}} -->
+<section
+	id="{{content_item.number}}"
+	class="wrapper spotlight {{content_item.style}}"
+>
+	<div class="inner">
+		<a href="{{content_item.link}}" class="image"
+			><img
+				src="{%static content_item.image %}"
+				alt="{{content_item.alt_image}}"
+		/></a>
+		<div class="content">
+			<h2 class="major">{{content_item.title}}</h2>
+			<p>{{content_item.content}}</p>
+			<a href="{{content_item.link}}" class="special"
+				>{{content_item.link_text}}</a
+			>
+		</div>
+	</div>
+</section>
+{% endfor %}
+<!--For Content End. -->
+{%endblock content%}
