@@ -1,4 +1,6 @@
 # SchoolPythonProject
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FDevParapalli%2FSchoolPythonProjects.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FDevParapalli%2FSchoolPythonProjects?ref=badge_shield)
+
 
 Each folder contains its own program and can be run independently from others.
 
@@ -30,3 +32,7 @@ arithmetic operations on these numbers.
 ```
 
 - None
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FDevParapalli%2FSchoolPythonProjects.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FDevParapalli%2FSchoolPythonProjects?ref=badge_large)
